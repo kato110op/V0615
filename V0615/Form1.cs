@@ -77,5 +77,16 @@ namespace V0615
                 vy[2] = -Math.Abs(vy[2]);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = 0;
+            for ( ; a < 10; a++)
+            {
+                MessageBox.Show($"{a}");
+            }
+
+            MessageBox.Show($"done{a}");
+        }
     }
 }
