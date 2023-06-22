@@ -5,15 +5,24 @@ namespace V0615
         static Random rand = new Random();
         int[] vx = new int[3];
         int[] vy = new int[3];
+        Label[] labels = new Label[100];
 
         public Form1()
         {
             InitializeComponent();
 
+   
+
             for (int i = 0; i < 3; i++)
             {
                 vx[i] = rand.Next(-10, 11);
                 vy[i] = rand.Next(-10, 11);
+
+                labels[i] = new Label();
+                labels[i].Text = "ž";
+                labels[i].AutoSize = true;
+                Controls.Add(labels[0]);
+
             }
         }
 
@@ -82,6 +91,15 @@ namespace V0615
             int a = 0;
             for ( ; a < 10; a++)
             {
+
+                if (a == 2)
+                {
+                    continue;
+                }
+                if (a == 5)
+                {
+                    break;
+                }
                 MessageBox.Show($"{a}");
             }
 
